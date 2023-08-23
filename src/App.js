@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import { events } from './dummyData'
+import timeGridPlugin from '@fullcalendar/timegrid'
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <FullCalendar
+  plugins={[ timeGridPlugin ]}
+  initialView="timeGridWeek"
+  slotMinTime="08:00:00"
+  slotMaxTime = "23:30:00"
+  slotDuration="00:15:00"
+  weekends={false}
+  eventBackgroundColor='red'
+  eventTextColor='blue'
+  events={[
+    ...events
+  ]
+}
+ allDaySlot ={false}
+
+  />
     </div>
   );
 }
