@@ -1,45 +1,23 @@
-export const events = [
+export const data = [
   {
-    id: 101,
-    title: "test 6",
-    start: "2023-08-23T10:00:00",
-    end: "2023-08-23T11:00:00",
-   
+    name: "food",
+    children: [
+      {
+        name: "bread"
+      },
+      {
+        name: "healthy",
+        children: [
+          {
+            name: "fruit",
+            children: [{ name: "bannana" }, { name: "apple" }]
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 101,
-    title: "test",
-    start: "2023-08-24T11:00:00",
-    end: "2023-08-24T11:30:00",
-  },
-  {
-    Id: 102,
-    title: "test 1",
-    start: "2023-08-25T10:00:00",
-    end: "2023-08-25T11:00:00",
-  },
-  {
-    Id: 103,
-    title: "test 2",
-    start: "2023-08-21T19:00:00",
-    end: "2023-08-21T19:30:00",
-  },
-  {
-    Id: 104,
-    title: "test 3",
-    start: "2023-08-26T08:30:00",
-    end: "2023-08-26T09:00:00",
-  },
-  {
-    Id: 105,
-    title: "test 4",
-    start: "2023-08-23T12:00:00",
-    end: "2023-08-23T12:30:00",
-  },
-  {
-    Id: 106,
-    title: "test 5",
-    start: "2023-08-22T13:00:00",
-    end: "2023-08-22T13:30:00",
-  },
+    name: "country",
+    children: [{ name: "India" }, { name: "USA" }]
+  }
 ];
