@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { data } from "./dummyData";
 import "./styles.css";
 import Tree from "./Tree";
 import { useSelector, useDispatch } from 'react-redux'
@@ -7,7 +6,7 @@ import { add } from './redux/Reducer'
 
 
 export default function App() {
-  
+
   const [name, setName] = useState("");
   const [treeData, setTreeData] = useState([]);
   const items = useSelector((state) => state.items.data)
